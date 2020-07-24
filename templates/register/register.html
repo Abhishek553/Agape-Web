@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <div class="container-fluid">
+        <div class="logo">
+            <img src="{% static 'images/alogo.png' %}" alt="Logo"/>
+        </div>
+        <div class="header">
+            <p><Strong>Register To<br><em>Agape Mission Center</em></Strong></p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 offset-ld-4 mt-5">
+                <form action="#" method="POST">
+                    <div>
+                        <h1>Create a new account</h1>
+                    </div>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" />
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="text" class="form-control" />
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" class="form-control" />
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" />
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" onclick="return validate()" class="btn btn-outline-primary"/>
+                    </div>
+                    <div class="forgetpsw">
+                        <label>I already have account! </label><a href="#"> Let's LogIn  !</a>
+                    </div>
+                </form>
+            </div>
+        </div>       
+    </div>
+{% endblock %}

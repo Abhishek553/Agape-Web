@@ -1,0 +1,24 @@
+*{
+    background-color: whitesmoke;
+}
+.profile{
+    background-color: antiquewhite;
+    border-style:solid black;
+    border-width:10px;
+}
+.news{
+    background-color: rgb(248, 235, 232);
+}
+.calender{
+    background-color: rgb(220, 243, 241);
+}
+.img-fluid{
+    width: 300px;
+    height: 400px;
+
+}
+.btn{
+    margin-bottom: auto;
+    padding-left: 100px;
+    border-radius: 12px;
+}

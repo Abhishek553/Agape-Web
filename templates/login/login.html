@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-4 offset-ld-4 mt-5">
+                <div class="logo">
+                    <img src="{% static 'images/alogo.png' %}" alt="Logo"/>
+                </div>
+                <div class="header">
+                    <p><Strong>Login To<br><em>Agape Mission Center</em></Strong></p>
+                </div>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label>Enter Username</label>
+                        <input type="text" class="form-control" />
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Enter Password</label>
+                        <input type="password" class="form-control" />
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">
+                        <!-- <button id="btnSubmit" class="btn btn-outline-primary">Submit</button> -->
+                        <input type="submit" onclick="return validate()" class="btn btn-outline-primary"/>
+                    </div>
+                    <div class="forgetpsw">
+                        <label>I forget my password ! </label><a href="#"> Need Help !</a>
+                    </div>
+                    <div class="new-account">
+                        <label>I am new here ! </label><a href="#"> Let's Create account !</a>
+                    </div>
+                </form>
+                <script>
+                    $(document).ready(()=>{
+                        $("#btnSubmit").click(()=>{
+                            let username=$("form")[0][0];
+                            let password=$("form")[0][1].value;
+
+                            if(username.value===""){
+                                $(username).parent().append("<p>Fill username please</p>")
+                            }
+                            $("form").submit();
+                        })
+                    })
+                </script>
+            </div>
+        </div>       
+    </div>
+
+{% endblock %}

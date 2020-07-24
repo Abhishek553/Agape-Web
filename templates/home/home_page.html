@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="profile">Personal Info</h1>
+            <img class="img-fluid" src="{% static 'images/profile.png' %}" alt="User Image">
+            <h4>
+                Abhishek Chaudhary<br>
+                Softwarica Collage<br>
+                Dillibazar<br>
+            </h4>
+            <h2>Accepted Events</h2>
+            <ol class="text-left">
+                <li>Youth Conference <br>2020/07/15</li>
+                <li>Monthly meeting <br>2020/08/01</li>
+                <li>Agape meeting <br>2020/09/25</li>
+            </ol>
+        </div>
+        <div class="col text-center">
+            <h1 class="news">Events</h1>
+            <h5 class="text-left">Anil Rai<br><p>By N.C Corporation</p></h5>
+            <p>Hello everyone, new event is going to take place please visit<br>Date:2020/10/12</p>
+            <img class="img-fluid" src="{% static 'images/cele.png' %}" alt="Celebration image">
+            <div class="btn">
+                <button type="button" class="btn btn-outline-primary">Accept</button>
+                <button type="button" class="btn btn-outline-danger">Decline</button>
+            </div>
+            <h5 class="text-left">Ashok Thapa<br><p>By A.C Organization</p></h5>
+            <p>Hello everybody, we have a upcoming event. Hope you will join and have some benefit<br>Date:2020/09/15</p>
+            <img class="img-fluid" src="{% static 'images/events.jpg' %}" alt="Celebration image">
+            <div class="btn">
+                <button type="button" class="btn btn-outline-primary">Accept</button>
+                <button type="button" class="btn btn-outline-danger">Decline</button>
+            </div>
+        </div>
+        <div class="col text-center">
+            <h1 class="calender">Calender</h1>
+            <img class="img-fluid" src="{% static 'images/jan.jpg' %}" alt="january">
+            <img class="img-fluid" src="{% static 'images/feb.jpg' %}" alt="january">
+            <img class="img-fluid" src="{% static 'images/mar.jpg' %}" alt="january">
+        </div>
+    </div>
+</div>
+{% endblock %}
