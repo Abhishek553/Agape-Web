@@ -21,14 +21,49 @@
             </ol>
         </div>
         <div class="col text-center">
-            <h1 class="news">Events</h1>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Events</button>
+
+            <div id="id01" class="modal">
+                  
+                <form class="modal-content animate" action="/action_page.php" method="post">
+              
+                  <div class="container">
+                      <textarea class="textarea">	</textarea>
+                  </div>
+                  <div class="container">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="submitbtn">Submit</button>
+                  </div>
+                </form>
+              </div>
+
             <h5 class="text-left">Anil Rai<br><p>By N.C Corporation</p></h5>
             <p>Hello everyone, new event is going to take place please visit<br>Date:2020/10/12</p>
             <img class="img-fluid" src="{% static 'images/cele.jpg' %}" alt="Celebration image">
-            <div class="btn">
-                <button type="button" class="btn btn-outline-primary">Accept</button>
-                <button type="button" class="btn btn-outline-danger">Decline</button>
-            </div>
+
+                <div class="container">
+                                                    
+                    <button type="button" class="btn btn-outline-primary" >Accept</button>
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Attendees</button>
+                </div>
+
+                    <div id="id02" class="modal">
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                
+                            <div class="container">
+                                <ol>
+                                    <li>Abhishek Chaudhary</li>
+                                    <li>Anil Rai</li>
+                                    <li>Peter Tamang</li>
+                                    <li>Meshak Ghimire</li>
+                                </ol>
+                            </div>
+                            <div class="container">
+                              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Close</button>
+                            </div>
+                        </form>
+                    </div>
+
             <h5 class="text-left">Ashok Thapa<br><p>By A.C Organization</p></h5>
             <p>Hello everybody, we have a upcoming event. Hope you will join and have some benefit<br>Date:2020/09/15</p>
             <img class="img-fluid" src="{% static 'images/events.jpg' %}" alt="Celebration image">
@@ -38,10 +73,32 @@
             </div>
         </div>
         <div class="col text-center">
-            <h1 class="calender">Calender</h1>
-            <img class="img-fluid" src="{% static 'images/jan.jpg' %}" alt="january">
-            <img class="img-fluid" src="{% static 'images/feb.jpg' %}" alt="january">
-            <img class="img-fluid" src="{% static 'images/mar.jpg' %}" alt="january">
+                <h1 class="heading3">We Believe</h1><br>
+                <div class="text-center">
+                    <img class="img-fluid1" src="{% static 'images/henry.jpg' %}" alt="Henry Ford">
+                    <p><br>
+                        Comming together is a beginning,<br>
+                        Staying together is progress,<br>
+                        and Working together is Success.<br><br>
+                                            -Henry Ford
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid1" src="{% static 'images/helen.jpg' %}" alt="Henry Ford">
+                    <p><br>
+                        Alone we can do so little;<br>
+                        together we can do so much.<br><br>
+                        - Helen Keller
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid1" src="{% static 'images/Phill.jpg' %}" alt="Phil Jakson">
+                    <p><br>
+                        The strength of the team is individual membe,;<br>
+                        The strength of each member is the team.<br><br>
+                        - Phil Jackson
+                    </p>
+                </div>
         </div>
     </div>
 </div>

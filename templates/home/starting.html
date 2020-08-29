@@ -4,19 +4,40 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="navbar navbar-expand-sm bg-light">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link 2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link 3</a>
-                </li>
-              </ul>
-        </div>
+      <div class="col-sm-12 text-center">
+        <img src="{% static 'images/heading.jpg' %}" alt="Heading Imane">
+
+        <button class="login">Login</button>
+
+        <button class="signin">SignIn</button>
+      </div>
+      <div class="col-sm-12">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light" id="nav">
+            <ul class="navbar-nav text-center">
+              <li class="nav-item">
+                <h4 class="about" id="about">About_Us</h4>
+                <p class="text-left">We share what we know to those who need it.<br> We believe to grow better, together.
+                We try to <br>connect such people who love to share their<br> knowledge with those who are eger to learn more.<br> So share to learn more. </p>
+              </li>
+              <li class="nav-item">
+                <h4 class="news" id="share">Share_Us</h4>
+                <ul class="text-left"><li>Vacancies</li>
+                                        <li>Meeting Invitation (National/International)</li>
+                                        <li>Seminar</li>
+                                    </ul>
+              </li>
+              <li class="nav-item">
+                <h4 class="contact" id="con">Contact_Us</h4>
+                <ul class="text-left">
+                    <li>Contact:    +9779876543210, +9779801234567</li>
+                    <li>Email:      agapemissioncenter@gmail.com</li>
+                    <li>Location:   Lalitpur, Bhainsepati-25</li>
+                    <li><a href="https://www.google.com.np/maps/place/Agape+Mission+Center/@27.6493526,85.2995525,619m/data=!3m1!1e3!4m5!3m4!1s0x0:0x89bd742a8ce5d85a!8m2!3d27.6488148!4d85.2992282?hl=en&authuser=0" target="_blank">Visit in Google Map</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>  
+      </div>
     </div>
-</div>
+  </div>
 {% endblock %}

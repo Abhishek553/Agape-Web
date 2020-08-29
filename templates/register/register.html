@@ -4,16 +4,20 @@
 
 {% load static %}
 
-    <div class="container-fluid">
-        <div class="logo">
-            <img src="{% static 'images/alogo.png' %}" alt="Logo"/>
-        </div>
-        <div class="header">
-            <p><Strong>Register To<br><em>Agape Mission Center</em></Strong></p>
-        </div>
+
         <div class="row">
             <div class="col-lg-4 offset-ld-4 mt-5">
+
+                <div class="container-fluid">
+                    <div class="logo">
+                        <img src="{% static 'images/alogo.png' %}" alt="Logo"/>
+                    </div>
+                    <div class="header">
+                        <p><Strong>Register To<br><em>Agape Mission Center</em></Strong></p>
+                    </div>
+                </div>
                 <form action="#" method="POST">
+                    {% csrf_token %}
                     <div>
                         <h1>Create a new account</h1>
                     </div>
@@ -45,6 +49,6 @@
                     </div>
                 </form>
             </div>
-        </div>       
+               
     </div>
 {% endblock %}

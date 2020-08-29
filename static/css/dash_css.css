@@ -13,12 +13,83 @@
     background-color: rgb(220, 243, 241);
 }
 .img-fluid{
-    width: 300px;
-    height: 400px;
-
+    width: 100%;
+    height: auto;
+}
+.img-fluid1{
+    width: 25%;
+    height: auto;
 }
 .btn{
     margin-bottom: auto;
     padding-left: 100px;
     border-radius: 12px;
+}
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: 10%;
+    padding: 20px 20px;
+    background-color: #f44336;
+  }
+  .submitbtn{
+      width:10%;
+      padding: 20px 20px;
+      background-color: #0695FA;
+  
+  }
+  .container {
+      width:50%;
+      padding: 50px;
+  }
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 70%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.7s;
+    animation: animatezoom 0.7s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+.textarea{
+    width:100%;
+    height:200px;
 }
