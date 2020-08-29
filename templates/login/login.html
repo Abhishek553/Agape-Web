@@ -14,14 +14,20 @@
                     <p><Strong>Login To<br><em>Agape Mission Center</em></Strong></p>
                 </div>
                 <form action="#" method="POST">
+                    {% csrf_token %}
+                    
+                    
+                    {% for message in messages %}
+                    <p>{{message}}</p>
+                    {% endfor %}
                     <div class="form-group">
-                        <label>Enter Username</label>
-                        <input type="text" class="form-control" />
+                        <label>Enter email</label>
+                        <input type="email" name="email" class="form-control" />
                         <span class="message"></span>
                     </div>
                     <div class="form-group">
-                        <label>Enter Password</label>
-                        <input type="password" class="form-control" />
+                        <label>Enter Password</label> 
+                        <input type="password" name="password" class="form-control" />
                         <span class="message"></span>
                     </div>
                     <div class="form-group">
@@ -32,22 +38,27 @@
                         <label>I forget my password ! </label><a href="#"> Need Help !</a>
                     </div>
                     <div class="new-account">
-                        <label>I am new here ! </label><a href="#"> Let's Create account !</a>
+                        <label>I am new here ! </label><a href="{% url 'register' %}"> Let's Create account !</a>
                     </div>
                 </form>
                 <script>
                     $(document).ready(()=>{
                         $("#btnSubmit").click(()=>{
-                            let username=$("form")[0][0];
+                            let email=$("form")[0][0];
                             let password=$("form")[0][1].value;
 
-                            if(username.value===""){
-                                $(username).parent().append("<p>Fill username please</p>")
+                            if(email.value===""){
+                                $(username).parent().append("<p>Enter emali address</p>")
                             }
                             $("form").submit();
                         })
                     })
                 </script>
+            </div>
+            <div class="col-lg-8 text-center">
+                <div class="img-fluid">
+                    <img src="{% static 'images/meeting.jpg' %}" alt="welcome image">
+                </div>
             </div>
         </div>       
     </div>

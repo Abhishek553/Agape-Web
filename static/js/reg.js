@@ -1,4 +1,4 @@
-function validate() {
+function validate_reg() {
 
     let form=document.getElementsByTagName("form")[0];
     let message=document.getElementsByClassName("message");

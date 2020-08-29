@@ -2,11 +2,11 @@ function validate() {
 
     let form=document.getElementsByTagName("form")[0];
     let message=document.getElementsByClassName("message");
-    let username=form[0].value;
+    let email=form[0].value;
     let password=form[1].value;
 
-    if(username===""){
-        message[0].innerHTML="Please enter username";
+    if(email===""){
+        message[0].innerHTML="Please enter email";
         return false;
     }
     if(password===""){

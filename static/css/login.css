@@ -1,0 +1,9 @@
+.img-fluid{
+    position: relative;
+    padding: 100px;
+}
+img{
+    padding:50px;
+    width:10%;
+    height:10%;
+}
