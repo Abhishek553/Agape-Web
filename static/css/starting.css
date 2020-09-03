@@ -1,12 +1,10 @@
-*{
-    background-color: #D6EAF8 ;
-}
+
 .login{
 
     position: absolute;
     top: 45%;
     left: 40%;
-    background-color: #0695FA ;
+    background-color: rgb(5, 195, 253) ;
     color: white;
     font-size: 20px;
     padding: 10px 24px;
@@ -15,10 +13,10 @@
     text-align: center;
 }
 .signin{
-    position: absolute;
+    /* position: absolute;
     top: 45%;
-    left: 52%;
-    background-color: #0695FA ;
+    left: 52%; */
+    background-color: rgb(5, 195, 253)1f4f7 ;
     color: white;
     font-size: 20px;
     padding: 10px 25px;

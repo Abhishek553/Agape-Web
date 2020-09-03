@@ -7,12 +7,12 @@
       <div class="col-sm-12 text-center">
         <img src="{% static 'images/heading.jpg' %}" alt="Heading Imane">
 
-        <button class="login">Login</button>
+        <button class="login"><a href="{% url 'login' %}">Login</a></button>
 
-        <button class="signin">SignIn</button>
+        <button class="signin"><a href="{% url 'register' %}">SignIn</a></button>
       </div>
       <div class="col-sm-12">
-        <nav class="navbar navbar-expand-sm bg-light navbar-light" id="nav">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-light" id="nav">
             <ul class="navbar-nav text-center">
               <li class="nav-item">
                 <h4 class="about" id="about">About_Us</h4>

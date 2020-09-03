@@ -22,34 +22,34 @@
                         <h1>Create a new account</h1>
                     </div>
                     <div class="form-group">
-                        <label>Full Name</label>
-                      
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" placeholder="User name"/>
                         <span class="message"></span>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        
-                        <input type="email" class="form-control" />
-                       
+                        <input type="email" class="form-control" placeholder="Collage or Organization"/>
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">        
+                        <input type="password" class="form-control" placeholder="Phone No."/>
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">         
+                        <input type="password" class="form-control" placeholder="E-mail"/>
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">   
+                        <input type="password" class="form-control" placeholder="Password"/>
+                        <span class="message"></span>
+                    </div>
+                    <div class="form-group">        
+                        <input type="password" class="form-control" placeholder="Confirm password"/>
                         <span class="message"></span>
                     </div>
                     <div class="form-group">
-                        <label>New Password</label>
-                     
-                        <input type="password" class="form-control" />
-                        <span class="message"></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Confirm Password</label>
-                        <input type="password" class="form-control" />
-                        <span class="message"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" onclick="return validate_reg()" class="btn btn-outline-primary"/>
+                        <input type="submit" onclick="return validate_reg()" class="btn btn-outline-primary" value="Sign In"/>
                     </div>
                     <div class="forgetpsw">
-                        <label>I already have account! </label><a href="{% url 'login' %}"> Let's LogIn  !</a>
+                        <label>I already have an account! </label><a href="{% url 'login' %}"> Let's LogIn  !</a>
                     </div>
                 </form>
             </div>

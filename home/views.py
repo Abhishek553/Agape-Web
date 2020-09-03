@@ -33,7 +33,7 @@ def register(request):
         if form.is_valid():
             form.save()
 
-            return redirect('login')
+            return redirect('/login')
 
     context = {'form': form}
     return render(request,"register/register.html", context)
@@ -41,4 +41,8 @@ def register(request):
 def starting(request):
     return render(request, "home/starting.html")
     
+def event(request):
+    return render(request, "event/create.html")
 
+def attend(request):
+    return render(request, "attend/index.html")

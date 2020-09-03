@@ -3,82 +3,69 @@
 {% block content %}
 
 {% load static %}
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center">
-            <h1 class="profile">Personal Info</h1>
+        <div class="col-lg-4 text-center">
+            <h1 class="profile">Profile</h1>
             <img class="img-fluid" src="{% static 'images/profile.png' %}" alt="User Image">
             <h4>
                 Abhishek Chaudhary<br>
                 Softwarica Collage<br>
                 Dillibazar<br>
             </h4>
-            <h2>Accepted Events</h2>
-            <ol class="text-left">
-                <li>Youth Conference <br>2020/07/15</li>
-                <li>Monthly meeting <br>2020/08/01</li>
-                <li>Agape meeting <br>2020/09/25</li>
-            </ol>
-        </div>
-        <div class="col text-center">
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Events</button>
+            <div>
+                <h2>Events Created</h2>
+                <table class="table table-success">
+                    <th>Meeting</th>
+                    <th>Edit</th>
 
-            <div id="id01" class="modal">
-                  
-                <form class="modal-content animate" action="/action_page.php" method="post">
-              
-                  <div class="container">
-                      <textarea class="textarea">	</textarea>
-                  </div>
-                  <div class="container">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="submitbtn">Submit</button>
-                    <button>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1"></label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                          </div>Picture
-                    </button>
-                  </div>
-                </form>
-              </div>
+                    <tr>
+                        <td>R3</td>
+                        <td><button><a href="{% url 'attend' %}">Attendee</a></button></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Accepted Events</h2>
+                <table class="table table-hover">
+                    <th>Meeting</th>
+                    <th>Date</th>
+
+                    <tr>
+                        <td>R3</td>
+                        <td>2020/12/07</td>
+                    </tr>
+                    <tr>
+                    <td>R5</td>
+                        <td>2020/12/07</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center">
+            <button style="width:auto;">
+                <a href="{% url 'event' %}">Add Events</a></button>
 
             <h5 class="text-left">Anil Rai<br><p>By N.C Corporation</p></h5>
             <p>Hello everyone, new event is going to take place please visit<br>Date:2020/10/12</p>
             <img class="img-fluid" src="{% static 'images/cele.jpg' %}" alt="Celebration image">
 
-                <div class="container">
+                <div class="btn">
                                                     
-                    <button type="button" class="btn btn-outline-primary" >Accept</button>
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Attendees</button>
+                    <button type="button" class="btn btn-outline-primary">Accept</button>
+                    
                 </div>
-
-                    <div id="id02" class="modal">
-                        <form class="modal-content animate" action="/action_page.php" method="post">
-                
-                            <div class="container">
-                                <ol>
-                                    <li>Abhishek Chaudhary</li>
-                                    <li>Anil Rai</li>
-                                    <li>Peter Tamang</li>
-                                    <li>Meshak Ghimire</li>
-                                </ol>
-                            </div>
-                            <div class="container">
-                              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Close</button>
-                            </div>
-                        </form>
-                    </div>
 
             <h5 class="text-left">Ashok Thapa<br><p>By A.C Organization</p></h5>
             <p>Hello everybody, we have a upcoming event. Hope you will join and have some benefit<br>Date:2020/09/15</p>
             <img class="img-fluid" src="{% static 'images/events.jpg' %}" alt="Celebration image">
             <div class="btn">
                 <button type="button" class="btn btn-outline-primary">Accept</button>
-                <button type="button" class="btn btn-outline-danger">Decline</button>
             </div>
         </div>
-        <div class="col text-center">
+        <div class="col-lg-4 text-center">
                 <h1 class="heading3">We Believe</h1><br>
                 <div class="text-center">
                     <img class="img-fluid1" src="{% static 'images/henry.jpg' %}" alt="Henry Ford">
@@ -86,7 +73,7 @@
                         Comming together is a beginning,<br>
                         Staying together is progress,<br>
                         and Working together is Success.<br><br>
-                                            -Henry Ford
+                                            -Henry Ford<br><br><br>
                     </p>
                 </div>
                 <div class="text-center">
@@ -94,7 +81,7 @@
                     <p><br>
                         Alone we can do so little;<br>
                         together we can do so much.<br><br>
-                        - Helen Keller
+                        - Helen Keller<br><br><br>
                     </p>
                 </div>
                 <div class="text-center">
