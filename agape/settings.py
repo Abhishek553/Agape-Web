@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'event',
     'attend',
-    'user'
+    'user',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -87,7 +88,7 @@ DATABASES = {
 
     'default':{
 
-        'ENGUNE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'web_dev',
         'USER': 'root',
         'PASSWORD': '',

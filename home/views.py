@@ -1,48 +1,49 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from home.forms import UserForm
+from home.models import User
+from event.models import Event
+# from authentication import Authentication
 
 
-# Create your views here.
+# # Create your views here.
+# @Authentication.valid_user
+
 def index(request):
-    return render(request,"home/home_page.html")
+    event = Event.objects.all()
+    
+    return render(request,"home/home_page.html", {'event':event})
 
 def loginPage(request):
 
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
 
-        user = authenticate(request, email=email, password=password)
-    
-        if user is not None:
-            login(request, email)
-            return redirect('main')
-        else:
+        request.session['email'] = request.POST['email']
+        request.session['password'] = request.POST['password']
+        return redirect('main')
+
+    else:
             messages.info(request, "Incorrect Username or Password")
 
     return render(request,"login/login.html")
 
 def register(request):
-    
-    form = UserCreationForm()
 
+    print(request.POST)
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserForm(request.POST)
+        print(form)
         if form.is_valid():
             form.save()
 
-            return redirect('/login')
+        return redirect('login')
+    else:   
+        form = UserForm()
 
-    context = {'form': form}
-    return render(request,"register/register.html", context)
-
+    return render(request,"register/register.html", {'form':form})
+ 
 def starting(request):
     return render(request, "home/starting.html")
-    
-def event(request):
-    return render(request, "event/create.html")
 
-def attend(request):
-    return render(request, "attend/index.html")
+  

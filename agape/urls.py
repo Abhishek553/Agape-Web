@@ -17,4 +17,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('home/', include('home.urls')),
+    path('event/', include('event.urls')),
+    path('attend/', include('attend.urls'))
 ]

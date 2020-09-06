@@ -7,23 +7,18 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-4 text-center">
-            <h1 class="profile">Profile</h1>
-            <img class="img-fluid" src="{% static 'images/profile.png' %}" alt="User Image">
-            <h4>
-                Abhishek Chaudhary<br>
-                Softwarica Collage<br>
-                Dillibazar<br>
-            </h4>
             <div>
                 <h2>Events Created</h2>
                 <table class="table table-success">
                     <th>Meeting</th>
-                    <th>Edit</th>
+                    <th>View</th>
 
-                    <tr>
-                        <td>R3</td>
-                        <td><button><a href="{% url 'attend' %}">Attendee</a></button></td>
+                    {% for events in event %}
+                    <tr>  
+                        <td>{{events.title}}</td>
+                        <td><a href="{% url 'attend' %}">Attendee</a></td>  
                     </tr>
+                    {% endfor %}
                 </table>
             </div>
             <div>
@@ -45,26 +40,33 @@
             </div>
         </div>
         <div class="col-lg-4 text-center">
-            <button style="width:auto;">
-                <a href="{% url 'event' %}">Add Events</a></button>
 
-            <h5 class="text-left">Anil Rai<br><p>By N.C Corporation</p></h5>
-            <p>Hello everyone, new event is going to take place please visit<br>Date:2020/10/12</p>
-            <img class="img-fluid" src="{% static 'images/cele.jpg' %}" alt="Celebration image">
+                <a href="{% url 'event' %}"  class="btn btn-light" style="width:100%; color:rgb(11, 248, 11)"><h3>Add Events</h3></a>
 
-                <div class="btn">
-                                                    
-                    <button type="button" class="btn btn-outline-primary">Accept</button>
-                    
-                </div>
+                <!-- {{event.image}} -->
+            <div class="events">
 
-            <h5 class="text-left">Ashok Thapa<br><p>By A.C Organization</p></h5>
-            <p>Hello everybody, we have a upcoming event. Hope you will join and have some benefit<br>Date:2020/09/15</p>
-            <img class="img-fluid" src="{% static 'images/events.jpg' %}" alt="Celebration image">
-            <div class="btn">
-                <button type="button" class="btn btn-outline-primary">Accept</button>
+                {% for events in event %}
+                <!-- <div class="col-10 mx-auto col-sm-6 col-lg-4 my-3"> -->
+                    <div class="item-container">
+                        <br><br><br>
+                        <h3>{{events.title}}</h3>
+                        <p>{{events.date}} </p>
+                        <p>{{events.text}} </p>
+                        <img src="/{{events.image}}" class="img-fluid img-thumbnail item-img" alt="" style="width:100%;">
+                        
+                    </div>
+    
+                    <form method="post" action="">
+                        {% csrf_token %}
+    
+                        <input type="submit" class="btn btn-primary" value="Accept">
+                       
+                    </form>
+                {% endfor %}
             </div>
         </div>
+
         <div class="col-lg-4 text-center">
                 <h1 class="heading3">We Believe</h1><br>
                 <div class="text-center">

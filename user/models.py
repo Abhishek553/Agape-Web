@@ -1,3 +1,12 @@
-from django.db import models
+# from django.db import models
 
-# Create your models here.
+# # Create your models here.
+# class User(models.Model):
+#     name = models.CharField(max_length=100)
+#     clz_org = models.CharField(max_length=100)
+#     phone = models.CharField(max_length=100)
+#     email = models.CharField(max_length=100, primary_key=True)
+#     password = models.CharField(max_length=100)
+
+#     class Meta:
+#         db_table = "users"
