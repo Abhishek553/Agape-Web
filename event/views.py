@@ -22,3 +22,13 @@ def delete(request,id):
     event = Event.objects.get(id=id)
     event.delete()
     return redirect("/attend")
+
+def update(request,id):
+    event = Event.objects.get(id=id)
+    if request.method=="POST":
+        form=EventForm(request.POST,request.FILES,instance=event)
+        form.save()
+        return redirect("/attend")
+    else:
+        form=EventForm(instance=event)
+    return render(request,"event/edit.html",{'form':form})

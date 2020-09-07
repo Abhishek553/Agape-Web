@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="row">
+  <div class="col-lg-4 text-center">
+    <form class="model" action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="container">
+        <h5>Add Meeting details.</h5>
+        <div>
+          <label >Title:  </label>
+          <input type="text" style="width:50%;" name="title">
+        </div>
+        <div>
+          <label>Date:</label>
+          <input type="date" style="width:50%;" name="date"> 
+        </div>
+        
+        <textarea style="width:100%;height:200px;background-color:white" placeholder="Explain in detail" name="text"></textarea>
+        
+        <div class="btn">
+          
+          <div class="form-group">
+            <label for="exampleFormControlFile1"></label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+          </div>
+          <input type="submit" value="Post" class="btn btn-primary">
+        </div>
+      </div>
+    </form>
+
+</div>
+<div class="col-lg-8">
+  <div class="message">
+    <h1><strong>Note:</strong></h1>
+    <p>This page includes national as well as international meeting events. So, we request you to provide the following details to our users.<br>
+    The required detail are as follow:</p>
+    <ol>
+      <li>Name and contact of Organization</li>
+      <li>Event name(theme)</li>
+      <li>Objectives</li>
+      <li>Date and Time</li>
+      <li>Location</li>
+    </ol>
+  </div>
+  <div class="img-fluid">
+    <h3>Here is a sample for you.</h3>
+    <img src="{% static 'images/sample2.jpg' %}" alt="Sample Image" style="width:700px; height:400px;">
+    
+  </div>
+</div>
+</div>
+
+
+  {% endblock %}

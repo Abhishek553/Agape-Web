@@ -32,28 +32,27 @@
                 <img src="/{{events.image}}" class="img-fluid img-thumbnail item-img" alt="" style="width:100%;">
                 
             </div>
-            <div class="col-lg-2">
-                <input type="submit" value="Edit" class="btn btn-info">
-                <a href="/event/delete/{{events.id}}" class="btn btn-success">Delete</a>
-            </div>
         </div>
         <div class="list">
             <table class="table table-primary">
                 <tr>
                     
-                    <th>Invitees</th>
-                    <th>E-Mail</th>
-                    <th>Contact</th>
-                    <th>Collage/Organization</th>
+                    <th>Event ID</th>
+                    <th>Date</th>
+                    <th>Discription</th>
+                    <th>Action</th>
                 </tr>
-                {% for user in users %}
+               
                 <tr>                
-                    <td>{{user.name}}</td>
-                    <td>{{user.email}}</td>
-                    <td>{{user.phone}}</td>
-                    <td>{{user.collage_org}}</td>
+                    <td>{{events.id}}</td>
+                    <td>{{events.date}}</td>
+                    <td>{{events.text}}</td>
+                    <td>                    
+                         <a href="/event/update/{{events.id}}" class="btn btn-success">Edit</a>
+                        <a href="/event/delete/{{events.id}}" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
-                {% endfor %}
+               
             </table>
             <br><br><br>
         </div>

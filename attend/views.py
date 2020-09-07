@@ -8,8 +8,8 @@ from home.models import User
 
 def index(request):
     event = Event.objects.all()
-    user = User.object.all()
-    return render(request, "attend/index.html", {'event':event}, {'user':user})
+    # user = User.object.all()
+    return render(request, "attend/index.html", {'event':event})
 
 def attend(request):
 
